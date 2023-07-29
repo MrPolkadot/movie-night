@@ -1,10 +1,12 @@
 body{
     background-color: rgb(101, 45, 233);
 }
+
 .hero {
     background: rgb(0,157,191);
     background: linear-gradient(180deg, rgba(0,157,191,1) 11%, rgba(1,209,219,1) 29%, rgba(104,17,252,1) 80%, rgba(113,0,255,1) 100%);
 }
+
 .fonts{
     font-family: 'Bungee Shade', cursive;
     color:white;
@@ -12,7 +14,34 @@ body{
     justify-content: center;
     font-size: 55px;
 }
+
 .area{
     display: flex;
     justify-content: center;
+}
+
+.move {
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.try{
+    height: 75px;
+    width: 250px;
+    font-size: 40px;
+     display: none; 
+}
+
+.random {
+    height: 100px;
+}
+
+.two {
+    font-size: 25px;
+}
+
+.picks {
+   height: 300px;
+   
 }
