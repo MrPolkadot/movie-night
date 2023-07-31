@@ -23,32 +23,35 @@
       </section>
     </header>
   </hero>
-  <div class="box page1">
-    <div class="box">
-      <div class="select">
-        <select>
-          <option>Rating</option>
-          <option>PG</option>
-          <option>PG-13</option>
-          <option>R</option>
-          <option>Any rating</option>
-        </select>
+  <div class="move">
+    <div class="box page1">
+      <div class="box choices is-flex">
         <div class="select">
           <select>
-            <option>Genre</option>
-            <option>Family</option>
-            <option>Comedy</option>
-            <option>Thriller/Suspense</option>
-            <option>Horror</option>
-            <option>Drama</option>
-            <option>Action</option>
-
+            <option id="rating">Rating</option>
+            <option id="pg">PG</option>
+            <option id="pg-13">PG-13</option>
+            <option id="r">R</option>
+            <option id="any-rating">Any rating</option>
           </select>
-        </div>
+          
+          <div class="select genre">
+            <select>
+              <option id="genre">Genre</option>
+              <option id="family">Family/Children</option>
+              <option id="comedy">Comedy</option>
+              <option id="thriller">Thriller/Suspense</option>
+              <option id="horror">Horror</option>
+              <option id="drama">Drama</option>
+              <option id="action">Action</option>
 
+            </select>
+          </div>
+
+        </div>
       </div>
-    </div>
-    <div>
+      <div class="move">  
       <button class="button" id="fetch-data">Get my movie!</button>
     </div>
+  </div>
 </body>
