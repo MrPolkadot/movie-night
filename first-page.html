@@ -23,51 +23,35 @@
       </section>
     </header>
   </hero>
-  <div class="box">
+  <div class="move">
+    <div class="box page1">
+      <div class="box choices is-flex">
+        <div class="select">
+          <select>
+            <option id="rating">Rating</option>
+            <option id="pg">PG</option>
+            <option id="pg-13">PG-13</option>
+            <option id="r">R</option>
+            <option id="any-rating">Any rating</option>
+          </select>
+          
+          <div class="select genre">
+            <select>
+              <option id="genre">Genre</option>
+              <option id="family">Family/Children</option>
+              <option id="comedy">Comedy</option>
+              <option id="thriller">Thriller/Suspense</option>
+              <option id="horror">Horror</option>
+              <option id="drama">Drama</option>
+              <option id="action">Action</option>
 
+            </select>
+          </div>
 
-    <div class="dropdown">
-      <div class="dropdown-trigger">
-        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-          <span>Click me</span>
-          <span class="icon is-small">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </button>
-      </div>
-      <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-        <div class="dropdown-content">
-          <a href="#" class="dropdown-item">
-            Overview
-          </a>
-          <a href="#" class="dropdown-item">
-            Modifiers
-          </a>
-          <a href="#" class="dropdown-item">
-            Grid
-          </a>
-          <a href="#" class="dropdown-item">
-            Form
-          </a>
-          <a href="#" class="dropdown-item">
-            Elements
-          </a>
-          <a href="#" class="dropdown-item">
-            Components
-          </a>
-          <a href="#" class="dropdown-item">
-            Layout
-          </a>
-          <hr class="dropdown-divider">
-          <a href="#" class="dropdown-item">
-            More
-          </a>
         </div>
       </div>
+      <div class="move">  
+      <button class="button" id="fetch-data">Get my movie!</button>
     </div>
-  </div>
-
-  <div>
-    <button class="button" id="fetch-data">Get my movie!</button>
   </div>
 </body>
