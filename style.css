@@ -35,7 +35,8 @@
     height: 75px;
     width: 250px;
     font-size: 40px;
-     display: none; 
+    color: rgb(247, 242, 237);
+    background-color: rgb(65, 61, 61); 
 }
 
 .random {
@@ -81,5 +82,10 @@ margin-top: 10px;
 
 .background {
     background-color: rgb(65, 61, 61);
-    color: rgb(247, 242, 237);;
+    color: rgb(247, 242, 237);
+}
+
+.try:hover {
+    background-color: rgb(37, 34, 34);
+    color:rgb(247, 242, 237);
 }
