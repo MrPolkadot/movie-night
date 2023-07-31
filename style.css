@@ -1,4 +1,4 @@
-body{
+body {
     background-color: rgb(101, 45, 233);
 }
 
@@ -64,6 +64,10 @@ p {
     background-color:rgb(52, 48, 48)
 }
 
+#background-size {
+    height: 130px;
+}
+
 .try:hover {
     height:80px;
     width:260px;
@@ -72,4 +76,12 @@ p {
 
 .try:active {
     color:antiquewhite;
+}
+
+.page1{
+    height: 600px;
+    width: 700px;
+    background-color: rgb(52, 48, 48);
+    justify-content: center;
+    align-items: center;
 }
