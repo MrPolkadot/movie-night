@@ -16,6 +16,7 @@
 }
 
 .area{
+    
     display: flex;
     justify-content: center;
 }
@@ -27,7 +28,7 @@
 }
 
 .from-top {
-    margin-top:50px;
+    margin-top:45px;
 }
 
 .try{
