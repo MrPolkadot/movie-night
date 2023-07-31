@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <title>Movie Night</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="./assets/script.js" defer></script>
@@ -86,16 +87,16 @@
                     </div>
                     <div class="tile is-parent">
                         <article class="tile is-child notification background">
-                            
-
-                        <article class="tile is-child notification">
 
 
-                            <div class="box random"></div>
-                            <figure class="image random-movie-image">
-                                <img src="https://bulma.io/images/placeholders/640x480.png">
-                            </figure>
-                        </article>
+                            <article class="tile is-child notification">
+
+
+                                <div class="box random"></div>
+                                <figure class="image random-movie-image">
+                                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                                </figure>
+                            </article>
                     </div>
                 </div>
                 <div class="tile is-parent">
@@ -103,11 +104,8 @@
                         <p class="title two">Where can I watch?</p>
 
                         <div class="content">
-
-                            
-
                             <div class="box">
-                                <p class="stream-avail"></p>
+                                <p class="title has-text-black stream-avail"></p>
                             </div>
                             <!-- Content -->
 
@@ -115,11 +113,11 @@
                     </article>
                 </div>
             </div>
-            
+
 
 
         </div>
-        
+
         </div>
         </article>
         </div>

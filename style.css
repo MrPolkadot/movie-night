@@ -3,13 +3,13 @@ body {
 }
 
 .hero {
-    background: rgb(0,157,191);
-    background: linear-gradient(180deg, rgba(0,157,191,1) 11%, rgba(1,209,219,1) 29%, rgba(104,17,252,1) 80%, rgba(113,0,255,1) 100%);
+    background: rgb(0, 157, 191);
+    background: linear-gradient(180deg, rgba(0, 157, 191, 1) 11%, rgba(1, 209, 219, 1) 29%, rgba(104, 17, 252, 1) 80%, rgba(113, 0, 255, 1) 100%);
 }
 
-.fonts{
+.fonts {
     font-family: 'Bungee Shade', cursive;
-    color:rgb(247, 242, 237);
+    color: rgb(247, 242, 237);
     display: flex;
     justify-content: center;
     font-size: 55px;
@@ -20,29 +20,29 @@ body {
     justify-content: center;
 } */
 
-.area{
+.area {
     display: flex;
     justify-content: center;
 }
 
 .move {
-    display:flex;
+    display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
-.try{
+.try {
     height: 75px;
     width: 250px;
     font-size: 40px;
     background-color: rgb(52, 48, 48);
-    color:rgb(66, 66, 181);
-    display: none; 
+    color: rgb(66, 66, 181);
+    display: none;
 }
 
 .random {
     height: 100px;
-    background-color:rgb(247, 242, 237)
+    background-color: rgb(247, 242, 237)
 }
 
 .two {
@@ -51,34 +51,35 @@ body {
 }
 
 p {
-    color:rgb(247, 242, 237);
+    color: rgb(247, 242, 237);
 }
+
 .picks {
-   height: 300px;
-   width: 300px;
+    height: 300px;
+    width: 300px;
 
-   background-color:rgb(247, 242, 237)
+    background-color: rgb(247, 242, 237)
 }
 
-.background{
-    background-color:rgb(52, 48, 48)
+.background {
+    background-color: rgb(52, 48, 48)
 }
 
 #background-size {
-    height: 130px;
+    height: 180px;
 }
 
 .try:hover {
-    height:80px;
-    width:260px;
-    color:rgb(66, 66, 181)
+    height: 80px;
+    width: 260px;
+    color: rgb(66, 66, 181)
 }
 
 .try:active {
-    color:antiquewhite;
+    color: antiquewhite;
 }
 
-.page1{
+.page1 {
     height: 600px;
     width: 700px;
     background-color: rgb(52, 48, 48);
