@@ -24,7 +24,8 @@
 .move {
     display:flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center; 
+
 }
 
 .from-top {
@@ -54,9 +55,8 @@
 .choices {
     height: 350px;
     width: 660px;
-    /* justify-content: center; */
-    
-    
+    justify-content: space-around; 
+      
 }
 
 .page1 {
