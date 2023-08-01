@@ -2,69 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-    <title>Movie Night</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script src="./assets/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title>Movie Night</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="./assets/script.js" defer></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <hero>
-        <header class="hero">
-            <section class="hero-body">
-
-                <p class="title fonts">Movie Night</p>
-                <!-- <button id="fetch-data">fetch Watchmode api</button> -->
-
-            </section>
-        </header>
-
-        <!-- <div class="dropdown">
-            <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                    <span>Click me</span>
-                    <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                <div class="dropdown-content">
-                    <a href="#" class="dropdown-item">
-                        Overview
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        Modifiers
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        Grid
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        Form
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        Elements
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        Components
-                    </a>
-                    <a href="#" class="dropdown-item">
-                        Layout
-                    </a>
-                    <hr class="dropdown-divider">
-                    <a href="#" class="dropdown-item">
-                        More
-                    </a>
-                </div>
-            </div> -->
-        </div>
+  <hero>
+    <header class="hero">
+      <section class="hero-body">
+        <p class="title fonts">Movie Night</p>
+      </section>
+    </header>
+  </hero>
+  <div class="move from-top">
+    <div class="box page1">
+      <div class="box choices is-flex">
+        <div class="select">
+          <select>
+            <option id="rating">Rating</option>
+            <option id="pg">PG</option>
+            <option id="pg-13">PG-13</option>
+            <option id="r">R</option>
+            <option id="any-rating">Any rating</option>
+          </select>
+          
+          <div class="select genre">
+            <select>
+              <option id="genre">Genre</option>
+              <option id="family">Family/Children</option>
+              <option id="comedy">Comedy</option>
+              <option id="thriller">Thriller/Suspense</option>
+              <option id="horror">Horror</option>
+              <option id="drama">Drama</option>
+              <option id="action">Action</option>
 
 
         <div class="tile is-ancestor area">
@@ -72,47 +51,43 @@
                 <div class="tile">
                     <div class="tile is-parent is-vertical">
                         <article class="tile is-child notification background">
-                            <p class="title two">My movie</p>
-                        </article>
-                        <article class="tile is-child notification background">
-
-                            <div class="box random"></div>
-                            <figure class="image random-movie-image">
-                                <img src="https://bulma.io/images/placeholders/640x480.png">
-                            </figure>
-                        </article>
-
-                        
-                    </div>
-
-                    <div class="tile is-parent">
-                        <article class="tile is-child notification background" id="back">
                             <p class="title two">Last 3 picks</p>
                             <div class="box picks"></div>
-                            <br></br>
-                            <article class="tile is-child move">
-                                <button class="button try">Try Again</button>
+                        </article>
+                        <article class="tile is-child move">
+                            <button class="button try">Try Again</button>
+
+                        </article>
+
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification background">
+
+
+                            <article class="tile is-child notification">
+
+
+                                <div class="box random"></div>
+                                <figure class="image random-movie-image">
+                                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                                </figure>
                             </article>
                     </div>
-
                 </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child notification background" id="background-size">
+                        <p class="title two">Where can I watch?</p>
 
-            </div>
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child notification background" id="background-size">
-                    <p class="title two">Where can I watch?</p>
+                        <div class="content">
+                            <div class="box">
+                                <p class="title has-text-black stream-avail"></p>
+                            </div>
+                            <!-- Content -->
 
-                    <div class="content">
-                        <div class="box">
-                            <p class="title has-text-black stream-avail"></p>
                         </div>
-                        <!-- Content -->
-
-                    </div>
-                </article>
+                    </article>
+                </div>
             </div>
-        </div>
 
 
 
@@ -123,12 +98,9 @@
         </div>
 
         </div>
-        </div>
-        </article>
-        </div>
-        </div>
-
-
+      </div>
+      <div class="move">  
+      <button class="button" id="fetch-data">Get my movie!</button>
+    </div>
+  </div>
 </body>
-
-</html>
