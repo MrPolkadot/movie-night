@@ -22,6 +22,8 @@ button.addEventListener("click", () => {
   getWatchModeApi();
   getTmdbApi();
 });
+
+// Fetch data from TMDB
 function getTmdbApi(){
     const options = {
         method: 'GET',
@@ -59,22 +61,4 @@ function getWatchModeApi() {
     });
 }
 
-//  function getTmdbApi(){
-//   let tmdbURL =
-//     "https://api.themoviedb.org/3/search/movie/?apiKey=" +
-//     tmdbApiKey +
-//     "&append_to_responses=sources";
-//     fetch(tmdbURL)
-//     .then(function(resp){
-//         console.log(resp);
-//        if(!resp.ok) throw new Error(resp.statusText);
-//        return resp.json();
-//     })
-//     .then(function (movie){
-//         console.log(movie);
-//         for (let i= 0; i<movie.results.length; i++) {
-//        let movieTitles= console.log(movie.results[i])
-//         }
-        
-//     })
-//  }
+
