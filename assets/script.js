@@ -17,13 +17,12 @@ let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"
 
 
 let buttonEl = document.querySelector("#fetch-data");
-buttonEl.addEventListener("click",( )=>{
-
-let button = document.querySelector("#fetch-data");
-button.addEventListener("click", () => {
+buttonEl.addEventListener("click", () => {
     getWatchModeApi();
     getTmdbApi();
 });
+
+
 function getTmdbApi() {
     const options = {
         method: 'GET',
@@ -60,6 +59,4 @@ function getWatchModeApi() {
             }
         });
 }
-
-
 
