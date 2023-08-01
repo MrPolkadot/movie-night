@@ -1,13 +1,10 @@
-/* body { */
-    /* background-color: rgb(101, 45, 233); */
-/* } */
 
 .hero {
     background: rgb(85, 152, 167);
     background: linear-gradient(180deg, rgba(0, 157, 191, 1) 11%, rgba(1, 209, 219, 1) 29%, rgba(104, 17, 252, 1) 80%, rgba(113, 0, 255, 1) 100%);
 }
 
-.fonts{
+.fonts {
     font-family: 'Bungee Shade', cursive;
     color: rgb(247, 242, 237);
     display: flex;
@@ -15,29 +12,29 @@
     font-size: 55px;
 }
 
-.area{
-    
+.area {
+
     display: flex;
     justify-content: center;
 }
 
 .move {
-    display:flex;
+    display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 
 }
 
 .from-top {
-    margin-top:45px;
+    margin-top: 45px;
 }
 
-.try{
+.try {
     height: 75px;
     width: 250px;
     font-size: 40px;
     color: rgb(247, 242, 237);
-    background-color: rgb(65, 61, 61); 
+    background-color: rgb(65, 61, 61);
 }
 
 .random {
@@ -49,20 +46,22 @@
 }
 
 .picks {
-   height: 300px;
-   
+    height: 300px;
+
 }
+
 .choices {
     height: 350px;
     width: 660px;
-    justify-content: space-around; 
-      
+    justify-content: space-around;
+    background: rgb(85, 152, 167);
+    background: linear-gradient(180deg, rgba(0, 157, 191, 1) 11%, rgba(1, 209, 219, 1) 29%, rgba(104, 17, 252, 1) 80%, rgba(113, 0, 255, 1) 100%);
 }
 
 .page1 {
     background-color: rgb(65, 61, 61);
-    width:700px;
-    height:500px;  
+    width: 700px;
+    height: 500px;
 }
 
 #back {
@@ -71,12 +70,12 @@
 }
 
 #fetch-data {
-    width:300px;
-    height:85px;
+    width: 300px;
+    height: 85px;
 }
 
 .select {
-margin-top: 10px;
+    margin-top: 10px;
 }
 
 .background {
@@ -86,9 +85,20 @@ margin-top: 10px;
 
 .try:hover {
     background-color: rgb(37, 34, 34);
-    color:rgb(247, 242, 237);
+    color: rgb(247, 242, 237);
 }
 
 .watch-size {
     width: 1290px;
+}
+
+.fonts2 {
+    font-family: 'Lumanosimo', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+}
+
+.genre {
+    height:75px;
+   
 }
