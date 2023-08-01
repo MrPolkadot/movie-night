@@ -16,7 +16,6 @@ let watchModeApiKey = "UZsT73vA3Tb6Sarx9DpPKtRWdc3u4qXCdT9vB3Zp"; //Key works!!
 let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"
 
 
-
 let button = document.querySelector("#fetch-data");
 button.addEventListener("click", () => {
     getWatchModeApi();
@@ -31,7 +30,7 @@ function getTmdbApi() {
         }
     };
 
-    fetch('https://api.themoviedb.org/3/movie/550?api_key=228bd2212e5a6adec66a6acb1d7342e2', options)
+    fetch('https://api.themoviedb.org/3/movie/550?api_key=228bd2212e5a6adec66a6acb1d7342e2&append_to_response=releases', options)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
