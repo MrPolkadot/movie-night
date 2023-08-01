@@ -5,10 +5,10 @@ let whereToWatch = document.querySelector(".stream-avail");
 
 //Event listener for our dropdown menu
 var select = document.querySelector(".select");
-select.addEventListener("click", function (event) {
-    event.stopPropagation();
-    select.classList.toggle("is-active");
-});
+// select.addEventListener("click", function (event) {
+//     event.stopPropagation();
+//     select.classList.toggle("is-active");
+// });
 
 let watchModeApiKey = "UZsT73vA3Tb6Sarx9DpPKtRWdc3u4qXCdT9vB3Zp"; //Key works!!
 
@@ -17,11 +17,16 @@ let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"
 
 
 
-let button = document.querySelector("#fetch-data");
-button.addEventListener("click", () => {
-    getWatchModeApi();
-    getTmdbApi();
-});
+let buttonEl = document.querySelector("#fetch-data");
+buttonEl.addEventListener("click",( )=>{
+
+        getWatchModeApi();
+        getTmdbApi();
+}) 
+    
+
+
+
 
 // Fetch data from TMDB
 function getTmdbApi(){
@@ -60,5 +65,6 @@ function getWatchModeApi() {
             }
         });
 }
+
 
 
