@@ -13,27 +13,30 @@ select.addEventListener("click", function (event) {
 let watchModeApiKey = "UZsT73vA3Tb6Sarx9DpPKtRWdc3u4qXCdT9vB3Zp"; //Key works!!
 
 
-let tmdbApiKey = "471410cb62e16ab7aacde9db73e4b88e";  //eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzE0MTBjYjYyZTE2YWI3YWFjZGU5ZGI3M2U0Yjg4ZSIsInN1YiI6IjY0YzMxMmMzZWMzNzBjMDExYzQ2NDU1YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Hg3WM49p5JkXqhti0hLB-27ngK3zwpr742R5qADyHR0
+let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"
 
 
 
 let button = document.querySelector("#fetch-data");
 button.addEventListener("click", () => {
   getWatchModeApi();
-//   getTmdbApi();
-  const options = {
-      method: 'GET',
-      headers: {
-        accept: 'application/json',
-        Authorization:  'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzE0MTBjYjYyZTE2YWI3YWFjZGU5ZGI3M2U0Yjg4ZSIsInN1YiI6IjY0YzMxMmMzZWMzNzBjMDExYzQ2NDU1YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Hg3WM49p5JkXqhti0hLB-27ngK3zwpr742R5qADyHR0'
-      }
-    };
-    
-    fetch('https://api.themoviedb.org/3/search/movie', options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
+  getTmdbApi();
 });
+function getTmdbApi(){
+    const options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization:  tmdbApiKey
+        }
+      };
+      
+      fetch('https://api.themoviedb.org/3/movie/550?api_key=228bd2212e5a6adec66a6acb1d7342e2', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+
+}
 
 //This will fetch our data from WatchMode
 function getWatchModeApi() {
@@ -58,7 +61,7 @@ function getWatchModeApi() {
 
 //  function getTmdbApi(){
 //   let tmdbURL =
-//     "https://api.themoviedb.org/3/search/movie/?query=toy%20story&api_key=" +
+//     "https://api.themoviedb.org/3/search/movie/?apiKey=" +
 //     tmdbApiKey +
 //     "&append_to_responses=sources";
 //     fetch(tmdbURL)
