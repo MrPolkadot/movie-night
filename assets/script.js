@@ -23,17 +23,30 @@ let selectObject = {
 
 function getRating() {
     console.log(ratingOptions.options[ratingOptions.selectedIndex].text);
- 
-    }
+    //make an empty array for movie rating
+    //for loop function
+    //for (let i = 0; i < response.releases.countries.length; i++) {
+    //if(selectedRating === response.releases.countries[i].certification && response.releases.countries[i].iso_3166_1 === "US") {
+    //push to localStorage() to house array to later set in fetch function;
+}
+
+//for our localStorage array:
+//randomize movieTitle array
+//to pull ONE movie id from the array
+//set a variable to save that one movie(id) and use it for our URL parameter
+
+
 
 
 function getGenre() {
     console.log(genreOptions.options[genreOptions.selectedIndex].text);
-  
+    //for loop function
+    //for (let i = 0; i < response.releases.countries.length; i++) {
+    //if(selectedRating === response.releases.countries[i].certification && response.releases.countries[i].iso_3166_1 === "US") {
+    //push to localStorage() to house array to later set in fetch function;
 }
 
-
-
+yo
 
 // function getRating() {
 //     for (let i = 0; i < ratingOptions.length; i++) {
@@ -73,7 +86,7 @@ buttonEl.addEventListener("click", () => {
 });
 
 //Gets the movie data from TMDB
-function getTmdbApi() {
+function getTmdbApi() { //How to convert this function syntax like the getWatchModeApi function
     const options = {
         method: 'GET',
         headers: {
@@ -105,7 +118,7 @@ function getWatchModeApi() {
             console.log(data);
             for (let i = 0; i < data.sources.length; i++) {
                 let streamTitles = data.sources[i].name;
-                whereToWatch.textContent = streamTitles;
+                whereToWatch.textContent = streamTitles;//WORK ON THIS (HOW TO SELECT ALL THE STREAMING OPTIONS OF THE MOVIE);
             }
         });
 }
