@@ -30,6 +30,15 @@ function getRating() {
     }
 }
 
+function getGenre() {
+    console.log(genreOptions.options[genreOptions.selectedIndex].text);
+    for (let i = 0; i < selectObject.genre.length; i++) {
+        let genreArr = [];
+        let genreValue = selectObject.genre[i].value;
+        console.log(genreValue);
+    }
+}
+
 
 
 
