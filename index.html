@@ -25,19 +25,19 @@
     </header>
   </hero>
 
-  
+
 
   <div class="tile is-ancestor is-flex move">
     <div class="tile is-vertical is-8">
       <div class="tile">
         <div class="tile is-parent is-vertical">
-          <article class="tile is-child notification background">     
+          <article class="tile is-child notification background">
 
             <div class="from-top">
               <div class="box page1">
                 <div class="box choices is-flex">
                   <div class="select">
-                    <select class="fonts2">
+                    <select class="fonts2 rating-options">
                       <option id="rating">Rating</option>
                       <option id="pg">PG</option>
                       <option id="pg-13">PG-13</option>
@@ -45,8 +45,8 @@
                       <option id="any-rating">Any rating</option>
                     </select>
                   </div>
-          
-                  <div class="select genre">
+
+                  <div class="select genre-options">
                     <select class="fonts2">
                       <option id="genre">Genre</option>
                       <option id="family">Family/Children</option>
@@ -58,7 +58,7 @@
                     </select>
                   </div>
                 </div>
-          
+
                 <div>
                   <div class="move">
                     <button class="button fonts2" id="fetch-data">Get my movie!</button>
@@ -75,8 +75,10 @@
         <div class="tile is-parent">
           <article class="tile is-child notification background">
             <p class="title">My movie</p>
-            <div class="box random"></div>
-            
+            <div class="box random">
+              <p id="my-movie"></p>
+            </div>
+
             <figure class="image is-4by3">
               <img src="https://bulma.io/images/placeholders/640x480.png">
             </figure>
@@ -86,13 +88,16 @@
       <div class="tile is-parent">
         <article class="tile is-child notification background">
           <p class="title">Where to watch?</p>
-          <div class="box random"></div>
+          <div class="box random">
+            <p id="stream-avail"></p>
+          </div>
           <div class="content">
+
           </div>
         </article>
       </div>
     </div>
-     <!-- <div class="tile is-parent">
+    <!-- <div class="tile is-parent">
       <article class="tile is-child notification is-success">
         <div class="content">
           <p class="title">Tall tile</p>
@@ -101,5 +106,5 @@
           </div>
         </div>
       </article>  -->
-    </div>
+  </div>
   </div>
