@@ -23,20 +23,13 @@ let selectObject = {
 
 function getRating() {
     console.log(ratingOptions.options[ratingOptions.selectedIndex].text);
-    for (let i = 0; i < selectObject.rating.length; i++) {
-        let ratingArr = [];
-        let ratingValue = selectObject.rating[i].value;
-        console.log(ratingValue);
+ 
     }
-}
+
 
 function getGenre() {
     console.log(genreOptions.options[genreOptions.selectedIndex].text);
-    for (let i = 0; i < selectObject.genre.length; i++) {
-        let genreArr = [];
-        let genreValue = selectObject.genre[i].value;
-        console.log(genreValue);
-    }
+  
 }
 
 
@@ -75,6 +68,8 @@ let buttonEl = document.querySelector("#fetch-data");
 buttonEl.addEventListener("click", () => {
     getWatchModeApi();
     getTmdbApi();
+    getGenre();
+    getRating();
 });
 
 //Gets the movie data from TMDB
