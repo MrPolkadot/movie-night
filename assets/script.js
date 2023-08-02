@@ -46,7 +46,7 @@ function getGenre() {
     //push to localStorage() to house array to later set in fetch function;
 }
 
-yo
+/* action=28, drama=18, */
 
 // function getRating() {
 //     for (let i = 0; i < ratingOptions.length; i++) {
