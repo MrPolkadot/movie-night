@@ -3,18 +3,33 @@ let randomMovie = document.querySelector(".random");
 let randomMovieImage = document.querySelector(".random-movie-image");
 let whereToWatch = document.querySelector("#stream-avail");
 let myMovie = document.querySelector("#my-movie");
-let pg= document.querySelector("#pg");
-let pgThirteen= document.querySelector("#pg-13");
-let R= document.querySelector("#r");
-let anyRating= document.querySelector("#any-rating")
-let family= document.querySelector("#family")
-let comedy= document.querySelector("#comedy")
-let thriller= document.querySelector("#thriller")
-let horror= document.querySelector("#horror")
-let drama= document.querySelector("#drama")
-let action= document.querySelector("#action")
-// let ratingOptions = document.querySelector(".rating-options");
-// let genreOptions = document.querySelector(".genre-options");
+let pg = document.querySelector("#pg");
+let pgThirteen = document.querySelector("#pg-13");
+let R = document.querySelector("#r");
+let anyRating = document.querySelector("#any-rating")
+let family = document.querySelector("#family")
+let comedy = document.querySelector("#comedy")
+let thriller = document.querySelector("#thriller")
+let horror = document.querySelector("#horror")
+let drama = document.querySelector("#drama")
+let action = document.querySelector("#action")
+let ratingOptions = document.querySelector(".rating-options");
+let genreOptions = document.querySelector(".genre-options");
+
+let selectObject = {
+    rating: [pg, pgThirteen, R, anyRating],
+    genre: [family, comedy, thriller, horror, drama, action]
+}
+
+function getRating() {
+    console.log(ratingOptions.options[ratingOptions.selectedIndex].text);
+    for (let i = 0; i < selectObject.rating.length; i++) {
+        let ratingArr = [];
+        let ratingValue = selectObject.rating[i].value;
+        console.log(ratingValue);
+    }
+}
+
 
 
 
@@ -67,7 +82,7 @@ function getTmdbApi() {
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
-// getGenre();
+    // getGenre();
 }
 
 //This will fetch our data from WatchMode
