@@ -3,20 +3,35 @@ let randomMovie = document.querySelector(".random");
 let randomMovieImage = document.querySelector(".random-movie-image");
 let whereToWatch = document.querySelector("#stream-avail");
 let myMovie = document.querySelector("#my-movie");
-let ratingOptions = document.querySelector(".rating-options");
-let genreOptions = document.querySelector(".genre-options");
+let pg= document.querySelector("#pg");
+let pgThirteen= document.querySelector("#pg-13");
+let R= document.querySelector("#r");
+let anyRating= document.querySelector("#any-rating")
+let family= document.querySelector("#family")
+let comedy= document.querySelector("#comedy")
+let thriller= document.querySelector("#thriller")
+let horror= document.querySelector("#horror")
+let drama= document.querySelector("#drama")
+let action= document.querySelector("#action")
+// let ratingOptions = document.querySelector(".rating-options");
+// let genreOptions = document.querySelector(".genre-options");
 
 
 
-function getRating() {
-    for (let i = 0; i < ratingOptions.length; i++) {
-        //if (ratingOptions[i]) {
-        console.log(ratingOptions[i].value);
-        //Input the rating value into our fetch function
-        //}
-    }
-}
-ratingOptions
+// function getRating() {
+//     for (let i = 0; i < ratingOptions.length; i++) {
+//         //if (ratingOptions[i]) {
+//         console.log(ratingOptions[i].value);
+//         //Input the rating value into our fetch function
+//         //}
+//     }
+// }
+// // function getGenre(){
+// //     for(let i = 0; i < genreOptions.length; i++){
+// //         console.log(genreOptions[i].value);
+// //     }
+// // }
+
 //Event listener for our dropdown menu
 var select = document.querySelector(".select");
 // select.addEventListener("click", function (event) {
@@ -52,7 +67,7 @@ function getTmdbApi() {
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
-
+// getGenre();
 }
 
 //This will fetch our data from WatchMode
