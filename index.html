@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="is-flex">
+<body class=>
   <hero>
     <header class="hero">
       <section class="hero-body">
@@ -27,18 +27,21 @@
 
 
 
-  <div class="tile is-ancestor is-flex move">
+  <div class="tile is-ancestor move">
     <div class="tile is-vertical is-8">
       <div class="tile">
-        <div class="tile is-parent is-vertical">
-          <article class="tile is-child notification background">
+        <div class="tile is-parent is-vertical is-flex">
+          <article class="tile is-child notification is-flex background">
 
-            <div class="from-top">
+            
               <div class="box page1">
-                <div class="box choices is-flex">
+                <div class="box choices">
+
+                  <p>Rating</p>
                   <div class="select">
                     <select class="fonts2 rating-options">
-                      <option id="rating">Rating</option>
+                      <option id="rating"></option>
+                      <option id="rating">PG</option>
                       <option id="pg">PG</option>
                       <option id="pg-13">PG-13</option>
                       <option id="r">R</option>
@@ -46,9 +49,10 @@
                     </select>
                   </div>
 
+                  <p>Genre</p>
                   <div class="select">
                     <select class="fonts2 genre-options">
-                      <option id="genre">Genre</option>
+                      <option id="genre"></option>
                       <option id="family">Family/Children</option>
                       <option id="comedy">Comedy</option>
                       <option id="thriller">Thriller/Suspense</option>
@@ -65,7 +69,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            
           </article>
           <article class="tile is-child notification background">
             <p class="title">Last 3 picks</p>
@@ -85,7 +89,7 @@
           </article>
         </div>
       </div>
-      <div class="tile is-parent">
+      <div class="tile is-parent is-flex">
         <article class="tile is-child notification background">
           <p class="title">Where to watch?</p>
           <div class="box random">
