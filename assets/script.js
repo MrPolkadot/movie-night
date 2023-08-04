@@ -15,6 +15,37 @@ let drama = document.querySelector("#drama")
 let action = document.querySelector("#action")
 let ratingOptions = document.querySelector(".rating-options");
 let genreOptions = document.querySelector(".genre-options");
+let tmdbBaseURL= 'https://api.themoviedb.org/3';
+let movieEndpoint= `${tmdbBaseURL}/discover/movie`
+
+async function getRandomMovie(){
+    
+        let response = await fetch(`${movieEndpoint}?api_key=${tmdbApiKey}&sort_by=popularity.desc&language=en-US&page=${Math.floor(Math.random() * 100) + 1}`);
+        let data = await response.json();
+        let movies = data.results;
+        let randomIndex = Math.floor(Math.random() * movies.length);
+        return movies[randomIndex];
+      }
+
+      function displayMovie(movie) {
+        let titleElement = document.getElementById('Title');
+        let overviewElement = document.getElementById('Overview');
+        let releaseDateElement = document.getElementById('ReleaseDate');
+        // need image as well
+      
+        titleElement.textContent = `Title: ${movie.title}`;
+        overviewElement.textContent = `Overview: ${movie.overview}`;
+        releaseDateElement.textContent = `Release Date: ${movie.release_date}`;
+      }
+// document.getElementById('fetch-data').addEventListener('click', async () =>{
+//     let movie = await getRandomMovie();
+//     if (movie) {
+//       displayMovie(movie);
+//     } else {
+//       alert('Failed to fetch a random movie.');
+//     }
+//   });
+
 
 let selectObject = {
     rating: [pg, pgThirteen, R, anyRating],
@@ -26,43 +57,43 @@ function getRating() {
     //make an empty array for movie rating
     //for loop function
     //for (let i = 0; i < response.releases.countries.length; i++) {
-    //if(selectedRating === response.releases.countries[i].certification && response.releases.countries[i].iso_3166_1 === "US") {
-    //push to localStorage() to house array to later set in fetch function;
-}
-
-//for our localStorage array:
-//randomize movieTitle array
-//to pull ONE movie id from the array
-//set a variable to save that one movie(id) and use it for our URL parameter
-
-
-
-
+        //if(selectedRating === response.releases.countries[i].certification && response.releases.countries[i].iso_3166_1 === "US") {
+            //push to localStorage() to house array to later set in fetch function;
+        }
+        
+        //for our localStorage array:
+        //randomize movieTitle array
+        //to pull ONE movie id from the array
+        //set a variable to save that one movie(id) and use it for our URL parameter
+        
+        
+        
+        
 function getGenre() {
     console.log(genreOptions.options[genreOptions.selectedIndex].text);
     //for loop function
     //for (let i = 0; i < response.releases.countries.length; i++) {
-    //if(selectedRating === response.releases.countries[i].certification && response.releases.countries[i].iso_3166_1 === "US") {
-    //push to localStorage() to house array to later set in fetch function;
-}
-
-/* action=28, drama=18, */
-
-// function getRating() {
-//     for (let i = 0; i < ratingOptions.length; i++) {
-//         //if (ratingOptions[i]) {
-//         console.log(ratingOptions[i].value);
-//         //Input the rating value into our fetch function
-//         //}
-//     }
-// }
-// // function getGenre(){
-// //     for(let i = 0; i < genreOptions.length; i++){
-// //         console.log(genreOptions[i].value);
-// //     }
-// // }
-
-//Event listener for our dropdown menu
+        //if(selectedRating === response.releases.countries[i].certification && response.releases.countries[i].iso_3166_1 === "US") {
+            //push to localStorage() to house array to later set in fetch function;
+        }
+        
+        /* action=28, drama=18, */
+        
+        // function getRating() {
+            //     for (let i = 0; i < ratingOptions.length; i++) {
+                //         //if (ratingOptions[i]) {
+                    //         console.log(ratingOptions[i].value);
+                    //         //Input the rating value into our fetch function
+                    //         //}
+                    //     }
+                    // }
+                    // // function getGenre(){
+                        // //     for(let i = 0; i < genreOptions.length; i++){
+                            // //         console.log(genreOptions[i].value);
+                            // //     }
+                            // // }
+                            
+                            //Event listener for our dropdown menu
 var select = document.querySelector(".select");
 // select.addEventListener("click", function (event) {
 //     event.stopPropagation();
@@ -83,10 +114,21 @@ buttonEl.addEventListener("click", () => {
     getTmdbApi();
     getGenre();
     getRating();
+    getRandomMovie();
+    
 });
+function displayMovieDetails(data) {
+    let movieTitleElement = document.getElementById('my-movie');
+    // let movieOverviewElement = document.getElementById('movieOverview');
+    // let movieReleaseDateElement = document.getElementById('movieReleaseDate');
+  
+    movieTitleElement.textContent = `Title: ${data.title}`;
+    // movieOverviewElement.textContent = `Overview: ${data.overview}`;
+    // movieReleaseDateElement.textContent = `Release Date: ${data.releases?.countries[0]?.release_date || 'N/A'}`;
+  }
 
 //Gets the movie data from TMDB
-function getTmdbApi() { //How to convert this function syntax like the getWatchModeApi function
+function getTmdbApi() { 
     const options = {
         method: 'GET',
         headers: {
@@ -97,7 +139,9 @@ function getTmdbApi() { //How to convert this function syntax like the getWatchM
 
     fetch('https://api.themoviedb.org/3/movie/550?api_key=228bd2212e5a6adec66a6acb1d7342e2&append_to_response=releases', options)
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => {console.log(response)
+        displayMovieDetails(response)}
+            )
         .catch(err => console.error(err));
     // getGenre();
 }
