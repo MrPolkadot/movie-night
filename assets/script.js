@@ -17,7 +17,12 @@ let ratingOptions = document.querySelector(".rating-options");
 let genreOptions = document.querySelector(".genre-options");
 let tmdbBaseURL= 'https://api.themoviedb.org/3';
 let movieEndpoint= `${tmdbBaseURL}/discover/movie`
+let genreOptions2= [{genre:"Thriller",id:53},{genre:"Drama",id:18},{genre:"Action",id:28},{genre:"Family",id:10751},{genre:"Horror",id:27},{genre:"Comedy", id:35}]
 
+
+array.forEach(genreOptions2 => {
+    
+});
 async function getRandomMovie(){
     
         let response = await fetch(`${movieEndpoint}?api_key=${tmdbApiKey}&sort_by=popularity.desc&language=en-US&page=${Math.floor(Math.random() * 100) + 1}`);
