@@ -13,6 +13,10 @@ Deployed page URL:
 * https://mrpolkadot.github.io/movie-night/ 
     
 
+Deployed page URL: 
+* https://mrpolkadot.github.io/movie-night/ 
+
+
 ## API LINKS
 * https://api.watchmode.com/
 * https://developer.themoviedb.org/docs
