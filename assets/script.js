@@ -15,28 +15,28 @@ let drama = document.querySelector("#drama")
 let action = document.querySelector("#action")
 let ratingOptions = document.querySelector(".rating-options");
 let genreOptions = document.querySelector(".genre-options");
-// let tmdbBaseURL= 'https://api.themoviedb.org/3';
-// let movieEndpoint= `${tmdbBaseURL}/discover/movie`
+let tmdbBaseURL= 'https://api.themoviedb.org/3';
+let movieEndpoint= `${tmdbBaseURL}/discover/movie`
 
-// async function getRandomMovie(){
+async function getRandomMovie(){
     
-//         let response = await fetch(`${movieEndpoint}?api_key=${tmdbApiKey}&sort_by=popularity.desc&language=en-US&page=${Math.floor(Math.random() * 100) + 1}`);
-//         let data = await response.json();
-//         let movies = data.results;
-//         let randomIndex = Math.floor(Math.random() * movies.length);
-//         return movies[randomIndex];
-//       }
+        let response = await fetch(`${movieEndpoint}?api_key=${tmdbApiKey}&sort_by=popularity.desc&language=en-US&page=${Math.floor(Math.random() * 100) + 1}`);
+        let data = await response.json();
+        let movies = data.results;
+        let randomIndex = Math.floor(Math.random() * movies.length);
+        return movies[randomIndex];
+      }
 
-//       function displayMovie(movie) {
-//         let titleElement = document.getElementById('Title');
-//         let overviewElement = document.getElementById('Overview');
-//         let releaseDateElement = document.getElementById('ReleaseDate');
-//         // need image as well
+      function displayMovie(movie) {
+        let titleElement = document.getElementById('Title');
+        let overviewElement = document.getElementById('Overview');
+        let releaseDateElement = document.getElementById('ReleaseDate');
+        // need image as well
       
-//         titleElement.textContent = `Title: ${movie.title}`;
-//         overviewElement.textContent = `Overview: ${movie.overview}`;
-//         releaseDateElement.textContent = `Release Date: ${movie.release_date}`;
-//       }
+        titleElement.textContent = `Title: ${movie.title}`;
+        overviewElement.textContent = `Overview: ${movie.overview}`;
+        releaseDateElement.textContent = `Release Date: ${movie.release_date}`;
+      }
 // document.getElementById('fetch-data').addEventListener('click', async () =>{
 //     let movie = await getRandomMovie();
 //     if (movie) {
@@ -114,6 +114,7 @@ buttonEl.addEventListener("click", () => {
     getTmdbApi();
     getGenre();
     getRating();
+    getRandomMovie();
     
 });
 function displayMovieDetails(data) {
@@ -144,7 +145,7 @@ function getTmdbApi() {
         .catch(err => console.error(err));
     // getGenre();
 }
-getTmdbApi();
+
 //This will fetch our data from WatchMode
 function getWatchModeApi() {
     let watchModeUrl =
