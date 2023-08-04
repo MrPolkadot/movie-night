@@ -14,19 +14,19 @@
 
 
                                                                             Image of the Website
-![alt text](./assets/Img/Movie%20Night%20Website%20.png)
+![Alt text](/assets/Img/The%20Movie%20Night%20Website.png)
 
                                                                             Where to set the recommended ratings/Genre
-![Alt text](/assets/img/Rating%20and%20Genre.png)
+![Alt text](./assets/img/Rating%20and%20Genre.png)
 
                                                                             Where the Image of the Movie will be Displayed
-![alt text](/assets/img/Movie%20Img.png)
+![Alt text](./assets/img/Movie%20Img.png)
 
                                                                             Where the last 3 Movies that were seached will be 
-![Alt text](/assets/img/Search%20History.png)
+![Alt text](./assets/img/Search%20History.png)
 
                                                                             The Button that Allows you to generate the movie
-![Alt text](/assets/img/Movie%20Gen%20Button.png)
+![Alt text](./assets/img/Movie%20Gen%20Button.png)
 
 Deployed page URL: 
 * https://mrpolkadot.github.io/movie-night/ 
