@@ -15,9 +15,14 @@ let drama = document.querySelector("#drama")
 let action = document.querySelector("#action")
 let ratingOptions = document.querySelector(".rating-options");
 let genreOptions = document.querySelector(".genre-options");
+
+
 let tmdbBaseURL = 'https://api.themoviedb.org/3';
 let movieEndpoint = `${tmdbBaseURL}/discover/movie`
+
+//An object to save and access the genre name and id
 let genreOptions2 = [{ genre: "Thriller/Suspense", id: 53 }, { genre: "Drama", id: 18 }, { genre: "Action", id: 28 }, { genre: "Family/Children", id: 10751 }, { genre: "Horror", id: 27 }, { genre: "Comedy", id: 35 }]
+
 function getGenre() {
     console.log(genreOptions.options[genreOptions.selectedIndex].text);
     for (let i = 0; i < genreOptions2.length; i++) {
@@ -52,17 +57,9 @@ function getGenre() {
 //       alert('Failed to fetch a random movie.');
 //     }
 //   });
-let selectObject = {
-    rating: [pg, pgThirteen, R, anyRating],
-    genre: [family, comedy, thriller, horror, drama, action]
-}
+
 function getRating() {
     console.log(ratingOptions.options[ratingOptions.selectedIndex].text);
-    //make an empty array for movie rating
-    //for loop function
-    //for (let i = 0; i < response.releases.countries.length; i++) {
-    //if(selectedRating === response.releases.countries[i].certification && response.releases.countries[i].iso_3166_1 === "US") {
-    //push to localStorage() to house array to later set in fetch function;
 }
 //for our localStorage array:
 //randomize movieTitle array
@@ -74,25 +71,8 @@ function getRating() {
 //push to localStorage() to house array to later set in fetch function;
 // }
 /* action=28, drama=18, */
-// function getRating() {
-//     for (let i = 0; i < ratingOptions.length; i++) {
-//         //if (ratingOptions[i]) {
-//         console.log(ratingOptions[i].value);
-//         //Input the rating value into our fetch function
-//         //}
-//     }
-// }
-// // function getGenre(){
-// //     for(let i = 0; i < genreOptions.length; i++){
-// //         console.log(genreOptions[i].value);
-// //     }
-// // }
-//Event listener for our dropdown menu
-var select = document.querySelector(".select");
-// select.addEventListener("click", function (event) {
-//     event.stopPropagation();
-//     select.classList.toggle("is-active");
-// });
+
+
 let watchModeApiKey = "UZsT73vA3Tb6Sarx9DpPKtRWdc3u4qXCdT9vB3Zp"; //Key works!!
 let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"; //Key works!
 //Get my movie button will run most of our functions for our page
@@ -104,14 +84,24 @@ buttonEl.addEventListener("click", () => {
     getRating();
     //getRandomMovie();
 });
+
+//Displays the movie result
 function displayMovieDetails(data) {
     let movieTitleElement = document.getElementById('my-movie');
+    let movieImage = document.querySelector("#movie-img");
+    let imageBaseUrl = "https://image.tmdb.org/t/p/w500";
+    let movieArray = [];
     // let movieOverviewElement = document.getElementById('movieOverview');
     // let movieReleaseDateElement = document.getElementById('movieReleaseDate');
-    movieTitleElement.textContent = `Title: ${data.title}`;
+    let movieResults = data.results;  //An array of movies
+    let randomizeMovie = movieResults[(Math.floor(Math.random() * movieResults.length))]; //Randomizes the array movies and returns an index number of an item from movie array
+    movieTitleElement.textContent = `Title: ${randomizeMovie.title}`; //Sets chosen element's title to the value of the index number that was returned(The movie title)
+
+    movieImage.src = imageBaseUrl + randomizeMovie.poster_path; //Places the movie poster image in image section
     // movieOverviewElement.textContent = `Overview: ${data.overview}`;
     // movieReleaseDateElement.textContent = `Release Date: ${data.releases?.countries[0]?.release_date || 'N/A'}`;
 }
+
 //Gets the movie data from TMDB
 function getTmdbApi(genreId) {
     const options = {
@@ -122,7 +112,6 @@ function getTmdbApi(genreId) {
         }
     };
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=228bd2212e5a6adec66a6acb1d7342e2&with_genres=${genreId}`, options)
-        // fetch('https://api.themoviedb.org/3/movie/550?api_key=228bd2212e5a6adec66a6acb1d7342e2&append_to_response=releases', options)
         .then(response => response.json())
         .then(response => {
             console.log(response)
@@ -130,7 +119,6 @@ function getTmdbApi(genreId) {
         }
         )
         .catch(err => console.error(err));
-    // getGenre();
 }
 //This will fetch our data from WatchMode
 function getWatchModeApi() {
