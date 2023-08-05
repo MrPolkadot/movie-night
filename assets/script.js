@@ -78,7 +78,7 @@ let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"; //Key works!
 //Get my movie button will run most of our functions for our page
 let buttonEl = document.querySelector("#fetch-data");
 buttonEl.addEventListener("click", () => {
-    getWatchModeApi();
+    //getWatchModeApi();
     //getTmdbApi();
     getGenre();
     getRating();
@@ -86,7 +86,7 @@ buttonEl.addEventListener("click", () => {
 });
 
 //Displays the movie result
-function displayMovieDetails(data) {
+function displayMovieDetails(data, movieIdNum) {
     let movieTitleElement = document.getElementById('my-movie');
     let movieImage = document.querySelector("#movie-img");
     let imageBaseUrl = "https://image.tmdb.org/t/p/w500";
@@ -95,15 +95,17 @@ function displayMovieDetails(data) {
     // let movieReleaseDateElement = document.getElementById('movieReleaseDate');
     let movieResults = data.results;  //An array of movies
     let randomizeMovie = movieResults[(Math.floor(Math.random() * movieResults.length))]; //Randomizes the array movies and returns an index number of an item from movie array
+    let movieId = randomizeMovie.id;
     movieTitleElement.textContent = `Title: ${randomizeMovie.title}`; //Sets chosen element's title to the value of the index number that was returned(The movie title)
 
     movieImage.src = imageBaseUrl + randomizeMovie.poster_path; //Places the movie poster image in image section
+    getWatchModeApi(movieId);
     // movieOverviewElement.textContent = `Overview: ${data.overview}`;
     // movieReleaseDateElement.textContent = `Release Date: ${data.releases?.countries[0]?.release_date || 'N/A'}`;
 }
 
 //Gets the movie data from TMDB
-function getTmdbApi(genreId) {
+function getTmdbApi(genreId) { //pass a parameter inside function to use the values inside this function on another function
     const options = {
         method: 'GET',
         headers: {
@@ -121,9 +123,9 @@ function getTmdbApi(genreId) {
         .catch(err => console.error(err));
 }
 //This will fetch our data from WatchMode
-function getWatchModeApi() {
+function getWatchModeApi(movieIdNum) {
     let watchModeUrl =
-        "https://api.watchmode.com/v1/title/movie-550/details/?apiKey=" +
+        `https://api.watchmode.com/v1/title/movie-${movieIdNum}/details/?apiKey=` +
         watchModeApiKey +
         "&append_to_response=sources";
     fetch(watchModeUrl)
