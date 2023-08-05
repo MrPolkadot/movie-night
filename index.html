@@ -33,9 +33,7 @@
         <div class="tile is-parent is-vertical is-flex">
           <article class="tile is-child notification is-flex background">
 
-            
-              <div class="box page1">
-                <div class="box choices">
+
 
                   
                   <div class="select">
@@ -48,27 +46,29 @@
                     </select>
                   </div>
 
-                  
-                  <div class="select">
-                    <select class="genre-options">
-                      <option class="fonts2"   id="genre">Genre</option>
-                      <option id="family">Family/Children</option>
-                      <option id="comedy">Comedy</option>
-                      <option id="thriller">Thriller/Suspense</option>
-                      <option id="horror">Horror</option>
-                      <option id="drama">Drama</option>
-                      <option id="action">Action</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <div class="move">
-                    <button class="button fonts2" id="fetch-data">Get my movie!</button>
-                  </div>
+            <div class="box page1">
+              <div class="box choices">
+                
+                <div class="select">
+                  <select class="genre-options">
+                    <option class="fonts2" id="genre">Genre</option>
+                    <option id="family">Family/Children</option>
+                    <option id="comedy">Comedy</option>
+                    <option id="thriller">Thriller/Suspense</option>
+                    <option id="horror">Horror</option>
+                    <option id="drama">Drama</option>
+                    <option id="action">Action</option>
+                  </select>
                 </div>
               </div>
-            
+
+              <div>
+                <div class="move">
+                  <button class="button fonts2" id="fetch-data">Get my movie!</button>
+                </div>
+              </div>
+            </div>
+
           </article>
           <article class="tile is-child notification background">
             <p class="title">Last 3 picks</p>
@@ -82,8 +82,8 @@
               <p id="my-movie"></p>
             </div>
 
-            <figure class="image is-4by3">
-              <img src="https://bulma.io/images/placeholders/640x480.png">
+            <figure class="image is-3by4">
+              <img id="movie-img" src="https://bulma.io/images/placeholders/640x480.png">
             </figure>
           </article>
         </div>
