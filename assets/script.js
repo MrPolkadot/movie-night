@@ -73,7 +73,7 @@ function getRating() {
 /* action=28, drama=18, */
 
 
-let watchModeApiKey = "UZsT73vA3Tb6Sarx9DpPKtRWdc3u4qXCdT9vB3Zp"; //Key works!!
+let watchModeApiKey = "wAu5kPQlRNmYVkFQ8LsiMTdxEGKVm7csTHfQBB0q"; //Key works!!
 let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"; //Key works!
 //Get my movie button will run most of our functions for our page
 let buttonEl = document.querySelector("#fetch-data");
@@ -86,7 +86,7 @@ buttonEl.addEventListener("click", () => {
 });
 
 //Displays the movie result
-function displayMovieDetails(data, movieIdNum) {
+function displayMovieDetails(data) {
     let movieTitleElement = document.getElementById('my-movie');
     let movieImage = document.querySelector("#movie-img");
     let imageBaseUrl = "https://image.tmdb.org/t/p/w500";
@@ -125,9 +125,13 @@ function getTmdbApi(genreId) { //pass a parameter inside function to use the val
 //This will fetch our data from WatchMode
 function getWatchModeApi(movieIdNum) {
     let watchModeUrl =
-        `https://api.watchmode.com/v1/title/movie-${movieIdNum}/details/?apiKey=` +
-        watchModeApiKey +
-        "&append_to_response=sources";
+        `https://api.watchmode.com/v1/title/movie-${movieIdNum}/sources/?apiKey=` +
+        watchModeApiKey //Changed URL to this to see what data returns. Still needs to be tested.
+
+    // `https://api.watchmode.com/v1/title/movie-${movieIdNum}/details/?apiKey=` +
+    //     watchModeApiKey +
+    //     "&append_to_response=sources";
+
     fetch(watchModeUrl)
         .then(function (response) {
             console.log(response);
@@ -136,9 +140,13 @@ function getWatchModeApi(movieIdNum) {
         })
         .then(function (data) {
             console.log(data);
-            for (let i = 0; i < data.sources.length; i++) {
-                let streamTitles = data.sources[i].name;
-                whereToWatch.textContent = streamTitles;//WORK ON THIS (HOW TO SELECT ALL THE STREAMING OPTIONS OF THE MOVIE);
+            for (let i = 0; i < data.length; i++) {
+                let streamTitles = data[i].name;
+                if (streamTitles === 0) {
+                    whereToWatch.textContent = "Movie unavailable";
+                } else {
+                    whereToWatch.textContent = whereToWatch.textContent + streamTitles;//WORK ON THIS (HOW TO SELECT ALL THE STREAMING OPTIONS OF THE MOVIE);
+                }
             }
         });
 }
