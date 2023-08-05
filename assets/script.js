@@ -99,7 +99,7 @@ function displayMovieDetails(data) {
     movieTitleElement.textContent = `Title: ${randomizeMovie.title}`; //Sets chosen element's title to the value of the index number that was returned(The movie title)
 
     movieImage.src = imageBaseUrl + randomizeMovie.poster_path; //Places the movie poster image in image section
-    getWatchModeApi(movieId);
+    getWatchModeApi(movieId); //Calls this function in here to grab the value of movieId
     // movieOverviewElement.textContent = `Overview: ${data.overview}`;
     // movieReleaseDateElement.textContent = `Release Date: ${data.releases?.countries[0]?.release_date || 'N/A'}`;
 }
@@ -126,7 +126,7 @@ function getTmdbApi(genreId) { //pass a parameter inside function to use the val
 function getWatchModeApi(movieIdNum) {
     let watchModeUrl =
         `https://api.watchmode.com/v1/title/movie-${movieIdNum}/sources/?apiKey=` +
-        watchModeApiKey //Changed URL to this to see what data returns. Still needs to be tested.
+        watchModeApiKey
 
     // `https://api.watchmode.com/v1/title/movie-${movieIdNum}/details/?apiKey=` +
     //     watchModeApiKey +
@@ -140,12 +140,15 @@ function getWatchModeApi(movieIdNum) {
         })
         .then(function (data) {
             console.log(data);
-            for (let i = 0; i < data.length; i++) {
-                let streamTitles = data[i].name;
-                if (streamTitles === 0) {
-                    whereToWatch.textContent = "Movie unavailable";
-                } else {
-                    whereToWatch.textContent = whereToWatch.textContent + streamTitles;//WORK ON THIS (HOW TO SELECT ALL THE STREAMING OPTIONS OF THE MOVIE);
+            if (data.length === 0) {
+                whereToWatch.textContent = "Movie unavailable"; //Appears if there is no streaming availability
+            } else {
+                let streamSources = [];
+                for (let i = 0; i < data.length; i++) {
+                    let streamTitles = data[i].name; //The streaming sources name
+                    streamSources.push(streamTitles); //Adds the sources names into empty array
+                    let filterSources = streamSources.filter((item, index) => streamSources.indexOf(item) === index); //Filters through the array to remove duplicates sources
+                    whereToWatch.textContent = filterSources; //Shows the new filtered array.
                 }
             }
         });
