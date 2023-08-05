@@ -39,6 +39,9 @@ Must have this visible "This product uses the TMDB API but is not endorsed or ce
 
 ## Credits
 
+* Useful links:\
+    https://www.geeksforgeeks.org/how-to-remove-duplicate-elements-from-javascript-array/#
+
 * Salvador Mejia https://github.com/MrPolkadot
 
 * Joe Nadherny https://github.com/joenadherny
