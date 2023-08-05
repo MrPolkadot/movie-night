@@ -17,7 +17,7 @@ let ratingOptions = document.querySelector(".rating-options");
 let genreOptions = document.querySelector(".genre-options");
 let tmdbBaseURL = 'https://api.themoviedb.org/3';
 let movieEndpoint = `${tmdbBaseURL}/discover/movie`
-let genreOptions2 = [{ genre: "Thriller", id: 53 }, { genre: "Drama", id: 18 }, { genre: "Action", id: 28 }, { genre: "Family", id: 10751 }, { genre: "Horror", id: 27 }, { genre: "Comedy", id: 35 }]
+let genreOptions2 = [{ genre: "Thriller/Suspense", id: 53 }, { genre: "Drama", id: 18 }, { genre: "Action", id: 28 }, { genre: "Family/Children", id: 10751 }, { genre: "Horror", id: 27 }, { genre: "Comedy", id: 35 }]
 function getGenre() {
     console.log(genreOptions.options[genreOptions.selectedIndex].text);
     for (let i = 0; i < genreOptions2.length; i++) {

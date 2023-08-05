@@ -8,9 +8,9 @@
 * When you click on the "Get my movie" it will auto populate a movie that's similar to what rating & Genre you chose.
 * The Movie will display under My Movies with the Title of the movie and the Image of the movie as well.
 * When the Movie appears the previous Movies that were populated will show up Under "Last 3 picks."
-* Where the Movie is avalible to watch will show up under "Where to Watch?"
+* Where the Movie is available to watch will show up under "Where to Watch?"
 ## The Goal
-* We wanted to help indecisive Individuals choose a movie that goes into the catagory that they prefer by a click of a button.
+* We wanted to help indecisive Individuals choose a movie that goes into the category that they prefer by a click of a button.
 
 
                                                                             Image of the Website
