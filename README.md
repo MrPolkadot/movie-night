@@ -1,21 +1,38 @@
 # MOVIE NIGHT
+
 ## User Story
-* As someone who struggles to pick out a movie, I want an app that will pick one for me along with showing me how and if I can watch it. 
+
+* As someone who struggles to pick out a movie, I want an app that will pick one for me along with showing me how and if I can watch it.
+Deployed page URL: 
+* https://mrpolkadot.github.io/movie-night/ 
+    
+
 ## Description
-* The website was created to generate a random movie by selecting the preferred Genre and then of a click of a button will pick the Movie that relates to what you want to watch.
+
+* The website was created to generate a random movie by selecting the preferred Rating/Genre and then of a click of a button will pick the Movie that relates to what you want to watch.
+
+## Usage
+         
+* By clicking the ratings you can choose from PG, PG-13, R, and Any Rating for the rating that you prefer.
+* As someone who struggles to pick out a movie, I want an app that will pick one for me along with showing me how and if I can watch it. 
 * By clicking the Genre drop down you can choose from Family/Children, Comedy, Thriller/Suspense, Horror, Drama, Action to help you figure out what kind of movie you would like to watch.
 * When you click on the "Get my movie" it will auto populate a movie that's similar to what Genre you chose.
 * The Movie will display under My Movies with the Title of the movie and the Image of the movie as well.
 * When the Movie appears the previous Movies that were populated will show up Under "Last 3 picks."
 * Where the Movie is available to watch will show up under "Where to Watch?"
+
 ## The Goal
-* We wanted to help indecisive Individuals choose a movie that goes into the category that they prefer by a click of a button. Then e wnat the movie randomly selected based on the user' selected filter to display below where it is available to watch. 
+
+* We wanted to help indecisive Individuals choose a movie that goes into the category that they prefer by a click of a button. Then we want the movie randomly selected based on the user' selected filter to display below where it is available to watch. 
+
 ## Javascript
-First we implemented several variables that were connected with our functions. Our functions first consisted of finding api's that would be able to return the data we were looking for which was streaming availibility along with a list of movies that could be filtered through rating. Once we were able to get the api functions working for retriving data we then created a genre option that would then show the genre of the movie that our api was fetching. This then led to our next step of figuring out a function that would fetch a random movie using the TMDB API. This took us some time but finally were able to get it work. Then we implemnted an array that would pick genre's based on their ID number in the TMDB API. WE then created function displaying the movies details along with an image of that randomly selected film. Then using watchmode we dissplay the selected movie's streaming avalibility below. 
+
+First we implemented several variables that were connected with our functions. Our functions first consisted of finding api's that would be able to return the data we were looking for which was streaming availability along with a list of movies that could be filtered through rating. Once we were able to get the api functions working for retrieving data we then created a genre option that would then show the genre of the movie that our api was fetching. This then led to our next step of figuring out a function that would fetch a random movie using the TMDB API. This took us some time but finally were able to get it work. Then we implemented an array that would pick genre's based on their ID number in the TMDB API. WE then created function displaying the movies details along with an image of that randomly selected film. Then using watchmode we display the selected movie's streaming availability below. 
+
 
 
                                                                             Image of the Website
-![Alt text](/assets/Img/The%20Movie%20Night%20Website.png)
+![Alt text](./assets/Img/The%20Movie%20Night%20Website.png)
 
                                                                             Where to set the recommended ratings/Genre
 ![Alt text](./assets/img/Rating%20and%20Genre.png)
@@ -29,14 +46,12 @@ First we implemented several variables that were connected with our functions. O
                                                                             The Button that Allows you to generate the movie
 ![Alt text](./assets/img/Movie%20Gen%20Button.png)
 
-Deployed page URL: 
-* https://mrpolkadot.github.io/movie-night/ 
-    
+
 
 ## API LINKS
 * https://api.watchmode.com/
 * https://developer.themoviedb.org/docs
-Must have this visible "This product uses the TMDB API but is not endorsed or certified by TMDB."
+"This product uses the TMDB API but is not endorsed or certified by TMDB."
 
 ## Credits
 

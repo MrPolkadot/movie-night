@@ -94,3 +94,7 @@ p {
 .stream-box {
     height: 100px;
 }
+
+footer div img {
+    float: right;
+}
