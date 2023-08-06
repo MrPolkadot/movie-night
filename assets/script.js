@@ -40,9 +40,9 @@ function getGenre() {
     }
 }
 
-function getRating() {
-    console.log(ratingOptions.options[ratingOptions.selectedIndex].text);
-}
+// function getRating() {
+//     console.log(ratingOptions.options[ratingOptions.selectedIndex].text);
+// }
 
 let watchModeApiKey = "wAu5kPQlRNmYVkFQ8LsiMTdxEGKVm7csTHfQBB0q"; //Key works!!
 let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"; //Key works!
@@ -53,7 +53,7 @@ let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"; //Key works!
 let buttonEl = document.querySelector("#fetch-data");
 buttonEl.addEventListener("click", () => {
     getGenre();
-    getRating();
+    //getRating();
 });
 
 //Saves the last 3 returned movies
@@ -125,7 +125,7 @@ function getWatchModeApi(movieIdNum) {
         .then(function (data) {
             console.log(data);
             if (data.length === 0) {
-                whereToWatch.textContent = "Movie unavailable"; //Appears if there is no streaming availability
+                whereToWatch.textContent = "Movie stream unavailable"; //Appears if there is no streaming availability
             } else {
                 let streamSources = [];
                 for (let i = 0; i < data.length; i++) {
