@@ -23,9 +23,11 @@ Deployed page URL:
 
 ## The Goal
 
-* We wanted to help indecisive Individuals choose a movie that goes into the category that they prefer by a click of a button. Then e wnat the movie randomly selected based on the user' selected filter to display below where it is available to watch. 
+* We wanted to help indecisive Individuals choose a movie that goes into the category that they prefer by a click of a button. Then we want the movie randomly selected based on the user' selected filter to display below where it is available to watch. 
+
 ## Javascript
-First we implemented several variables that were connected with our functions. Our functions first consisted of finding api's that would be able to return the data we were looking for which was streaming availibility along with a list of movies that could be filtered through rating. Once we were able to get the api functions working for retriving data we then created a genre option that would then show the genre of the movie that our api was fetching. This then led to our next step of figuring out a function that would fetch a random movie using the TMDB API. This took us some time but finally were able to get it work. Then we implemnted an array that would pick genre's based on their ID number in the TMDB API. WE then created function displaying the movies details along with an image of that randomly selected film. Then using watchmode we dissplay the selected movie's streaming avalibility below. 
+
+First we implemented several variables that were connected with our functions. Our functions first consisted of finding api's that would be able to return the data we were looking for which was streaming availability along with a list of movies that could be filtered through rating. Once we were able to get the api functions working for retrieving data we then created a genre option that would then show the genre of the movie that our api was fetching. This then led to our next step of figuring out a function that would fetch a random movie using the TMDB API. This took us some time but finally were able to get it work. Then we implemented an array that would pick genre's based on their ID number in the TMDB API. WE then created function displaying the movies details along with an image of that randomly selected film. Then using watchmode we display the selected movie's streaming availability below. 
 
 
 
@@ -49,7 +51,7 @@ First we implemented several variables that were connected with our functions. O
 ## API LINKS
 * https://api.watchmode.com/
 * https://developer.themoviedb.org/docs
-Must have this visible "This product uses the TMDB API but is not endorsed or certified by TMDB."
+"This product uses the TMDB API but is not endorsed or certified by TMDB."
 
 ## Credits
 
