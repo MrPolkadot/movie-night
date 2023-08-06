@@ -7,12 +7,12 @@ let pg = document.querySelector("#pg");
 let pgThirteen = document.querySelector("#pg-13");
 let R = document.querySelector("#r");
 let anyRating = document.querySelector("#any-rating")
-// let family = document.querySelector("#family")
-// let comedy = document.querySelector("#comedy")
-// let thriller = document.querySelector("#thriller")
-// let horror = document.querySelector("#horror")
-// let drama = document.querySelector("#drama")
-// let action = document.querySelector("#action")
+let family = document.querySelector("#family")
+let comedy = document.querySelector("#comedy")
+let thriller = document.querySelector("#thriller")
+let horror = document.querySelector("#horror")
+let drama = document.querySelector("#drama")
+let action = document.querySelector("#action")
 let ratingOptions = document.querySelector(".rating-options");
 let genreOptions = document.querySelector(".genre-options");
 
@@ -52,12 +52,8 @@ let tmdbApiKey = "228bd2212e5a6adec66a6acb1d7342e2"; //Key works!
 //Get my movie button will return a movie
 let buttonEl = document.querySelector("#fetch-data");
 buttonEl.addEventListener("click", () => {
-    //getWatchModeApi();
-    //getTmdbApi();
-
     getGenre();
     getRating();
-
 });
 
 //Saves the last 3 returned movies
@@ -78,8 +74,6 @@ function displayMovieDetails(data) {
     let movieImage = document.querySelector("#movie-img");
     let imageBaseUrl = "https://image.tmdb.org/t/p/w500";
 
-    // let movieOverviewElement = document.getElementById('movieOverview');
-    // let movieReleaseDateElement = document.getElementById('movieReleaseDate');
     let movieResults = data.results;  //An array of movies
     let randomizeMovie = movieResults[(Math.floor(Math.random() * movieResults.length))]; //Randomizes the array movies and returns an index number of an item from movie array
 
@@ -90,15 +84,16 @@ function displayMovieDetails(data) {
     getWatchModeApi(movieId); //Calls this function in here to grab the value of movieId
 
     saveMovie(randomizeMovie.title);
-
-    // movieOverviewElement.textContent = `Overview: ${data.overview}`;
-    // movieReleaseDateElement.textContent = `Release Date: ${data.releases?.countries[0]?.release_date || 'N/A'}`;
 }
 
+function randomNum() {
+    let randomNumber = Math.floor(Math.random() * 500);
+    return randomNumber;
+};
 
 
 //Gets the movie data from TMDB
-function getTmdbApi(genreId) { //pass a parameter inside function to use the values inside this function on another function
+function getTmdbApi(genreId) {//pass a parameter inside function to use the values inside this function on another function
     const options = {
         method: 'GET',
         headers: {
@@ -106,7 +101,7 @@ function getTmdbApi(genreId) { //pass a parameter inside function to use the val
             Authorization: tmdbApiKey
         }
     };
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=228bd2212e5a6adec66a6acb1d7342e2&with_genres=${genreId}`, options)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=228bd2212e5a6adec66a6acb1d7342e2&with_genres=${genreId}&page=${randomNum()}&sort_by=popularity.desc`, options)
         .then(response => response.json())
         .then(response => {
             console.log(response)
@@ -120,10 +115,6 @@ function getWatchModeApi(movieIdNum) {
     let watchModeUrl =
         `https://api.watchmode.com/v1/title/movie-${movieIdNum}/sources/?apiKey=` +
         watchModeApiKey
-
-    // `https://api.watchmode.com/v1/title/movie-${movieIdNum}/details/?apiKey=` +
-    //     watchModeApiKey +
-    //     "&append_to_response=sources";
 
     fetch(watchModeUrl)
         .then(function (response) {

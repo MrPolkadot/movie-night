@@ -13,7 +13,6 @@ Deployed page URL:
 
 ## Usage
          
-* By clicking the ratings you can choose from PG, PG-13, R, and Any Rating for the rating that you prefer.
 * As someone who struggles to pick out a movie, I want an app that will pick one for me along with showing me how and if I can watch it. 
 * By clicking the Genre drop down you can choose from Family/Children, Comedy, Thriller/Suspense, Horror, Drama, Action to help you figure out what kind of movie you would like to watch.
 * When you click on the "Get my movie" it will auto populate a movie that's similar to what Genre you chose.
@@ -27,17 +26,19 @@ Deployed page URL:
 
 ## Javascript
 
+
 First we implemented several variables that were connected with our functions. Our functions first consisted of finding api's that would be able to return the data we were looking for which was streaming availability along with a list of movies that could be filtered through rating. Once we were able to get the api functions working for retrieving data we then created a genre option that would then show the genre of the movie that our api was fetching. This then led to our next step of figuring out a function that would fetch a random movie using the TMDB API. This took us some time but finally were able to get it work. Then we implemented an array that would pick genre's based on their ID number in the TMDB API. WE then created function displaying the movies details along with an image of that randomly selected film. Then using watchmode we display the selected movie's streaming availability below. We also created a section that would return past results utilzing local storage. 
 ## HTML and CSS
 Our goal was to make a user friendly interface that would have some dropdown menus to select the genre of the film along with different sections of where results would show. We decided to use Bulma to design the page and took some time to get used to but feel that it came out very clean. Initially were going to try and create two html pages as mentioned in our figma layout but decided to keep it more simple of using one page. 
 
 
 
-                                                                            Image of the Website
-![Alt text](./assets/Img/The%20Movie%20Night%20Website.png)
 
-                                                                            Where to set the recommended ratings/Genre
-![Alt text](./assets/img/Rating%20and%20Genre.png)
+                                                                            Image of the Website
+![Alt text](./assets/img/movie-night-page.png)
+
+                                                                            Where to set the recommended Genre
+![Alt text](./assets/img/genre-dropdown.png)
 
                                                                             Where the Image of the Movie will be Displayed
 ![Alt text](./assets/img/Movie%20Img.png)
@@ -52,7 +53,7 @@ Our goal was to make a user friendly interface that would have some dropdown men
 
 ## API LINKS
 * https://api.watchmode.com/
-* https://developer.themoviedb.org/docs
+* https://developer.themoviedb.org/docs\
 "This product uses the TMDB API but is not endorsed or certified by TMDB."
 
 ## Credits
