@@ -32,7 +32,7 @@ First we implemented several variables that were connected with our functions. O
 
 
                                                                             Image of the Website
-![Alt text](./assets/Img/The%20Movie%20Night%20Website.png)
+![Alt text](./assets/img/The%20Movie%20Night%20Website.png)
 
                                                                             Where to set the recommended ratings/Genre
 ![Alt text](./assets/img/Rating%20and%20Genre.png)
@@ -50,7 +50,7 @@ First we implemented several variables that were connected with our functions. O
 
 ## API LINKS
 * https://api.watchmode.com/
-* https://developer.themoviedb.org/docs
+* https://developer.themoviedb.org/docs\
 "This product uses the TMDB API but is not endorsed or certified by TMDB."
 
 ## Credits
