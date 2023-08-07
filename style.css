@@ -98,3 +98,33 @@ p {
 footer div img {
     float: right;
 }
+
+@media screen and (max-width: 425px) {
+    .tile {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: auto;
+
+
+    }
+
+    .select {
+        width: 150px;
+    }
+
+    .page1 {
+        width: 100%;
+    }
+
+    .choices {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .stream-box {
+        height: 200px;
+    }
+}
